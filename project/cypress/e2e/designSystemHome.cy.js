@@ -32,6 +32,10 @@ it ('DS Home Page', () => {
     cy.get('.block__intro').should('exist')
     cy.get('#nav-item-design-guidelines > :nth-child(1) > a.ng-star-inserted').click()
     cy.contains('Use horizontal layout when you have the room').click()
+    DsHomePage.getSubmitARequest().click()
+    cy.get('#submit-a-request > strong').should('contain.text', 'Submit a request')
+    DsHomePage.getFooter()
+    cy.get('.item2 > img').should('exist').should('have.attr', 'alt', 'Canada wordmark')
 
 })
 })

@@ -49,6 +49,17 @@ export class DesignSystemHomePage{
         return cy.get('#datePickerPageNavItem > :nth-child(1)')
     }
 
+    getSubmitARequest()
+    {
+        return cy.get('#requestFormPageNavItem > :nth-child(1) > a')
+    }
+
+    getFooter()
+    {
+        return cy.get('.grid-container')
+    }
+    
+
 
 
 
