@@ -20,7 +20,7 @@ it ('DS Home Page', () => {
     DsHomePage.getOverview().click()
     cy.get('.for-devs > a').should('contain.text', 'Get started').click()
     cy.get('#nav-item-usage > :nth-child(1) > a.ng-star-inserted').should('exist').click()
-    cy.get(':nth-child(28)').should('contain.text', 'full release:').click()
+    cy.get(':nth-child(28)').should('contain.text', 'full release:')
     DsHomePage.getFoundations().should('exist')
     DsHomePage.getUtilities().should('exist').click()
     cy.get('#nav-item-breakpoints > :nth-child(1) > a.ng-star-inserted').should('exist').click()

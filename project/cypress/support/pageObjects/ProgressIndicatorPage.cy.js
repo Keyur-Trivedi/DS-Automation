@@ -1,5 +1,5 @@
-export class DesignSystemHomePage{
-
+export class DesignSystemHomePage
+{
     navigate(url){
         cy.visit(url)
     }
@@ -158,5 +158,4 @@ export class DesignSystemHomePage{
     {
         return cy.get('#accordion-button-open-codeViewerTabsCccordion > .button-content-container > .text')
     }
-
 }

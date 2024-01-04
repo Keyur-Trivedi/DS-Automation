@@ -58,11 +58,4 @@ export class DesignSystemHomePage{
     {
         return cy.get('.grid-container')
     }
-    
-
-
-
-
-
-
 }
