@@ -69,7 +69,7 @@ it ('Submit A Request', () => {
     cy.get('.input-hint').should('contain.text', 'We currently are unable to support attachments')
     cy.get('#references-text-area').type('Supporting document is attached.')
 
- if (SubmitARequestPage.getUrgentYes().check()) 
+ /*if (SubmitARequestPage.getUrgentYes().check()) 
     {cy.get('.urgent-request-radio-container > ircc-cl-lib-radio-input > .ng-invalid > .radio-buttons > :nth-child(1) > .small_label').should('contain.text', 'Yes');
     SubmitARequestPage.getCompletedDate();
     const year = '2024'; // Replace with your desired year
@@ -82,130 +82,13 @@ it ('Submit A Request', () => {
     cy.contains('.select-option', month);
     cy.get('#date-requested-datepicker_dayControl').select(day);
     cy.contains('.select-option', day);
-}
-
-                                                                                    // When executing the positive secenario...comment the below IF condition
-                                                                                    // When executing the negetive secenario...comment the above IF condition
-
- //if (!SubmitARequestPage.getUrgentNo().check());
-
-    SubmitARequestPage.getEmail().type('Keyur.Trivedi@cic.gc.ca');
-    cy.get('#submit-request-btn').click();
-})    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-/*if (SubmitARequestPage.getUrgentYes()) {
-    // If 'Yes' is selected
-    cy.get('.urgent-request-radio-container > ircc-cl-lib-radio-input > .ng-touched > .radio-buttons > :nth-child(2)').should('contain.text', 'No').click();
-    
-    SubmitARequestPage.getUrgentReason();
-    cy.get('#urgent-details-text-area').type('Urgent Passport application');
-
-    SubmitARequestPage.getCompletedDate();
-    const year = '2024'; // Replace with your desired year
-    const month = 'January'; // Replace with your desired month
-    const day = '25'; // Replace with your desired day
-    
-    // Click on the year dropdown
-    cy.get('#date-requested-datepicker_yearControl').select(year);
-    cy.contains('.select-option', year);
-    
-    // Click on the month dropdown
-    cy.get('#date-requested-datepicker_monthControl').select(month);
-    cy.contains('.select-option', month);
-    
-    // Click on the day dropdown
-    cy.get('#date-requested-datepicker_dayControl').select(day);
-    cy.contains('.select-option', day);
-
-    SubmitARequestPage.getEmail().type('Keyur.Trivedi@cic.gc.ca');
-    cy.get('#submit-request-btn').click();
-} else {
-    // If 'No' is selected
-    SubmitARequestPage.getUrgentNo().check();
-    SubmitARequestPage.getEmail().type('Keyur.Trivedi@cic.gc.ca');
-    cy.get('#submit-request-btn').click();
 }*/
-    
-    
-    
-    
-    
-    
-    /*//SubmitARequestPage.getUrgentYes().check()
-    SubmitARequestPage.getUrgentNo().check()
-    //cy.get('#radio-request-urgent0').check()
-    //const isYesSelected = () => {cy.get("label[for='radio-request-urgent0']").should('contain.text', 'Yes')
-    //.then(function(){if(isYesSelected){
-        //return
-    cy.get('.urgent-request-radio-container > ircc-cl-lib-radio-input > .ng-invalid > .radio-buttons > :nth-child(1) > .small_label').should('contain.text', 'No');
-    
-    
-    
-        //SubmitARequestPage.getUrgentReason();
-        //cy.get('#urgent-details-text-area').type('Urgent Passport application');}
-       
-    SubmitARequestPage.getCompletedDate();
-        const year = '2024'; // Replace with your desired year
-        const month = 'January'; // Replace with your desired month
-        const day = '25'; // Replace with your desired day
-        
-        // Click on the year dropdown
-        cy.get('#date-requested-datepicker_yearControl').select(year);
-        cy.contains('.select-option', year);
-        
-        // Click on the month dropdown
-        cy.get('#date-requested-datepicker_monthControl').select(month);
-        cy.contains('.select-option', month);
-        
-        // Click on the day dropdown
-        cy.get('#date-requested-datepicker_dayControl').select(day);
-        cy.contains('.select-option', day);
+                                                                                    // When executing the negetive secenario...comment the ABOVE IF condition
+                                                                                   // When executing the positive secenario...comment the BELOW IF condition
+
+ if (!SubmitARequestPage.getUrgentNo().check());
 
     SubmitARequestPage.getEmail().type('Keyur.Trivedi@cic.gc.ca');
-        cy.get('#submit-request-btn').click()
-    });*/
+    cy.get('#submit-request-btn').click();
 })
-/*
-
-
-   {return cy.get('.urgent-request-radio-container > ircc-cl-lib-radio-input > .ng-invalid > .radio-buttons > :nth-child(1) > .small_label').should('contain.text', 'Yes')}
-  
-
-    SubmitARequestPage.getUrgentYes().click()
-    cy.get('#radio-request-urgent0').click()
-
-    SubmitARequestPage.getUrgentReason()
-    cy.get('#urgent-details-text-area').type('Urgent Passport application')
-    
-    SubmitARequestPage.getCompletedDate()
-    const year = '2023'; // Replace with your desired year
-    const month = 'December'; // Replace with your desired month
-    const day = '25'; // Replace with your desired day
-    
-    // Click on the year dropdown
-    cy.get('#date-requested-datepicker_yearControl').select(year);
-    cy.contains('.select-option', year);
-    
-    // Click on the month dropdown
-    cy.get('#date-requested-datepicker_monthControl').select(month);
-    cy.contains('.select-option', month);
-    
-    // Click on the day dropdown
-    cy.get('#date-requested-datepicker_dayControl').select(day);
-    cy.contains('.select-option', day);
-
-    SubmitARequestPage.getEmail()
-    cy.get('#emailconfig').type('Keyur.Trivedi@cic.gc.ca')
-    cy.get('#submit-request-btn').click()*/
+})
